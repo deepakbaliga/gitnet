@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/deepakbaliga/gitnet/issues"
   },
-  "homepage": "https://github.com/deepakbaliga/gitnet#readme"
+  "homepage": "https://github.com/deepakbaliga/gitnet#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "neo4j": "^2.0.0-RC2"
+  }
 }

@@ -29,9 +29,13 @@ router.get('/', function (req, res) {
 
         var url = "https://api.github.com/users/" + req.body.username;
 
-        console.log(url);
+
         client.get(url, args, function (data, response) {
-            console.log(data);
+
+            _response.data = data;
+            console.log(_response);
+            //res.end(JSON.stringify(_response));
+            res.end();
 
         });
 
@@ -40,8 +44,9 @@ router.get('/', function (req, res) {
     } else {
         _response.success = false;
         _response.message = 'username field cannot be blank';
+        res.end(JSON.stringify(_response));
     }
-    res.end();
+
 });
 
 
